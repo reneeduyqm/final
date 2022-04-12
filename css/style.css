@@ -1,0 +1,593 @@
+html{
+  scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 48px;
+    line-height: 1;
+    padding: 15px;
+    text-align: center;
+
+}
+
+body{
+  background-color: #adecd2;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-size: 18px;
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  line-height: 33px;
+  font-family: "Trirong", serif;
+}
+
+
+#show{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+ 
+ }
+ 
+ 
+#sentence_one{
+   position: relative;
+   display: inline-block;
+   bottom: -30px;
+   opacity: 0;
+   font-size: 40px;
+   color: #000000;
+
+}
+
+#sentence_one.active{
+   bottom: 0;
+   opacity: 1;
+   transition: ease-in-out 0.5s;
+}
+
+#sentence-two.fade{
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+
+
+
+.bio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+img{
+  height: 300px;
+  width: 310px;
+
+  
+}
+
+img:hover{
+    -moz-img-shadow: 0 0 15px #c9ec29;
+    -webkit-img-shadow: 0 0 15px #c9ec29;
+    box-shadow: 0 0 15px #c9ec29;
+}
+
+nav{
+  width: 100%;
+  margin: 1em;
+  justify-content: space-between;
+}
+
+nav li{
+	background-color: #ECFF4D;
+	padding:10px; 
+  margin:3px;
+	width:12em;
+	border:1px solid black;
+	display: inline-block;
+  text-align: center;
+	
+
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover{
+    /* make the background color of your link black and the text white when you hover over it */
+    color: #416a03;
+}
+
+.active a{
+	text-transform: uppercase;
+  color: #ffffff;
+  background-color: #5757b9;
+}
+
+.skip{
+  position: absolute;
+  left: -500px;
+}
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+.button {
+    background-color: #8dad8e;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+form {
+    border: 5px solid #a3d673;
+    border-radius: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin:20px;
+    
+}
+  
+legend{ 
+    font-size: 125%;
+    font-style:italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+label{
+    display: inline-block;
+    margin-right:50px;
+    width:15%;
+}
+  fieldset{
+    display: flex;
+    display: inline-block;
+    justify-content: center; 
+
+  }
+
+  input {
+    width: 100%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  span{
+    margin-left: 20%;
+    font-family: italic;
+    font-weight: bold;
+  }
+  
+  textarea{
+    width: 100%;
+    height: 18vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+input[type=checkbox]{
+      display:inline;
+      width:inherit;
+}
+  
+  input[type=submit] {
+    display: block;
+    background-color: #38803C;
+    color: white;
+    margin: 30px 0;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+  .nav_links{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+  }
+    
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin: 30px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    color: #000000;
+  }
+
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .bio img{
+    width: 290px;
+    height: 300px;
+    display: block;
+    padding: 3px;
+    border: 5px dashed #79c089ec;
+    margin: 30px;
+    border-radius: 90px 0px 40px 0px;
+
+    animation-timing-function: ease;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+
+
+  }
+
+  #time{
+    text-align: center;
+    font-size: 18px;
+
+  }
+    
+  @keyframes mymove {
+      0%   {width: 165px;}
+      100% {width: 225px;}
+  }
+
+  
+
+
+    .bio img{
+      animation: mymove 5s;
+      
+    }
+   
+    #name p{
+      text-align: center;
+      font-size: 20px;
+      font-style: oblique;
+      font-weight: bold;
+      line-height: 15px;
+      color:#ffffff;
+      padding: 10px;
+
+    }
+
+    form{
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  
+    input{
+      width:100%;
+    }
+  
+    textarea{
+      width:100%;
+      height: 25vh;
+    }
+   
+   div + label{
+      line-height: 5vh;
+      vertical-align: top;
+    }
+
+#photos{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 75px;
+    font-size: 30px;
+    flex-wrap: wrap;
+
+  }
+
+
+
+@keyframes swinging {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+#recording{
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  animation: swinging 5s ease-in-out forwards infinite;
+}
+
+#recording:hover {
+  animation-play-state: paused;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  #recording{
+  animation: none;
+  }
+  #recording{
+    animation: reduce;
+  }
+  .bio img {
+    animation: none;
+  }
+  .bio img{
+        animation: reduce;
+  }
+}
+
+
+
+#hobby{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-items: center;
+
+  width: auto;
+  margin: 45px;
+
+} 
+
+#hobby img {
+  border: 2px solid #3d81e1;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  opacity: 0.5;
+}
+
+#hobby img:hover {
+  transform: scale(1.10);
+  border: none;
+  opacity: 1;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: #000000;
+}
+
+.flip-card-back {
+  background-color: #53cce4;
+  color: #000000;
+  transform: rotateY(180deg);
+}
+
+#timer{
+  width:10%;
+}
+
+
+@media only screen and (min-width: 800px) {
+  form{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  input{
+    width:100%;
+  }
+
+  textarea{
+    width:100%;
+    height: 18vh;
+ }
+ 
+ div + label{
+    line-height: 6vh;
+    vertical-align:top;
+ }
+
+ #photos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+
+  }
+  
+
+  #hobby{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    overflow:hidden;
+    column-gap: 10px;
+    justify-items: center;
+    width: auto;
+    margin: 25px;
+  
+  } 
+  .museum{
+    grid-column: 1/3;
+    grid-row:2/3;
+  }
+
+  .ceramics{
+    grid-column: 1/3;
+    grid-row:4/5;
+
+  }
+
+  .dish{
+    grid-column: 1/3;
+    grid-row:6/7;
+  }
+
+  .cake{
+    grid-column: 1/3;
+    grid-row:8/9;
+  }
+
+  .milktea_green{
+    grid-column: 1/3;
+    grid-row:10/11;
+  }
+
+
+
+}
+
+@media screen and (min-width: 1000px){
+  #photos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  
+  }
+    
+  
+    #hobby{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      justify-items: center;
+      width: auto;
+      margin: 45px;
+    
+    } 
+    .museum{
+      grid-column: 1/2;
+      grid-row:2/3;
+    }
+  
+    .ceramics{
+      grid-column: 2/3;
+      grid-row:4/5;
+  
+    }
+  
+    .dish{
+      grid-column: 1/2;
+      grid-row:6/7;
+    }
+  
+    .cake{
+      grid-column: 2/3;
+      grid-row:8/9;
+    }
+  
+    .milktea_green{
+      grid-column: 1/2;
+      grid-row:10/11;
+    }
+
+
+
+
+
+}
