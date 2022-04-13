@@ -29,7 +29,7 @@
 </head>
 
 <body>
-	<a class = "skip" href="#main">Skip to Main Content</a>
+	<a class="skip" href="#main" tabindex="0" >Skip to Main Content</a>
 	<header>
 		<nav>
 			<ul class="nav_links">
@@ -46,7 +46,7 @@
 
 	<main class = "container" id ="main">
 		<div class = "bio">
-			<img src = "images/renee.jpg" alt = "my photo" width= "200"/>
+			<img src = "images/renee.jpg" alt = "My photo" width= "200"/>
 			<div id = "name">
 				<p> Name: Renee Du</p>
 				<p> Pronounce: She-her-her</p>
@@ -79,13 +79,13 @@
 			<fieldset> 
 				<legend>Contact Me:</legend>
 				<label for="name_id">Your Name</label>
-				   <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+				<input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
 		  
 				<label for="email_id">Your Email</label>
 				<input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
 		  
 				<label for="phone_id">Phone Number</label>
-					<input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+				<input type="tel" name="phone" placeholder="123-456-7890" id = "phone_id" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 				<div><span>Format: 123-456-7890</span></div>
 		  
 		  
@@ -127,12 +127,14 @@
 	</script>
 	
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+	
 	<script>
 		const myTimeout = setTimeout(myGreeting, 5000);
 		
 		function myGreeting() {
 		  document.getElementById("time").innerHTML = "Thank you for visiting!"
 		}
-		</script>
+	</script>
 </body>
 </html>

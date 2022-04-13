@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-	<a class = "skip" href="#main">Skip to Main Content</a>
+	<a class="skip" href="#main" tabindex="0" >Skip to Main Content</a>
 	<header>
 		<nav>
 			<ul class="nav_links">
@@ -177,13 +177,20 @@
 
 		
     </main>
+    <div id = "count_time">
     <button onclick="startCount()">Start count!</button>
-    <input type="text" id="timer">
+    <label id = "count" for="timer">count time</label>
+    <input type="text" id="timer" name="timeer" required>
+
     <button onclick="stopCount()">Stop count!</button>
 
-    <p>Click on "Start count!" to start the timer. The input field will count forever, starting at 0.</p>
+    <p>Click on "Start count!" to start the timer.</p>
 
-    <p>Click on "Stop count!" to stop counting. Click on "Start count!" to start the timer again.</p>
+    <p>Click on "Stop count!" to stop counting.</p>
+
+
+    </div>
+    
     <footer>
 		
 		<a href="#main" class="button"><i class="fa fa-arrow-up"></i>To the top</a>
