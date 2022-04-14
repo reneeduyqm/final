@@ -385,8 +385,10 @@ input[type=checkbox]{
 
   
   #count_time{
+    display: flex;
     font-size: 15px;
     margin-left: 20px;
+    flex-wrap: nowrap;
   }
 
   #count{
