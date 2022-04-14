@@ -255,18 +255,17 @@ input[type=checkbox]{
 
   .goog-te-gadget {
     font-family: arial;
-    font-size: 11px;
+    font-size: 16px;
     color: #666;
     white-space: nowrap;
     margin: 15px;
 }
 
-.goog-te-gadget {
-  font-family: arial;
-  font-size: 18px;
-  color: #666;
-  white-space: nowrap;
+.goog-logo-link {
+  font-size: 16px;
 }
+
+
 
   .flip-card {
     background-color: transparent;
