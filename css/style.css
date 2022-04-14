@@ -111,6 +111,7 @@ nav li{
 
 a:link {
   text-decoration: none;
+  font-size: 18px;
 }
 
 a:hover{
@@ -201,7 +202,7 @@ label{
     box-sizing: border-box;
   }
   span{
-    margin-left: 20%;
+    margin-left: 10%;
     font-family: italic;
     font-weight: bold;
   }
@@ -248,8 +249,8 @@ input[type=checkbox]{
   
 
   #google_translate_element img{
-    width:40px;
-    height: 20px;
+    width:60px;
+    height: 30px;
     
   }
 
@@ -265,6 +266,9 @@ input[type=checkbox]{
   font-size: 16px;
 }
 
+.goog-te-combo{
+  font-size: 14pt;
+}
 
 
   .flip-card {
