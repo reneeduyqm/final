@@ -248,10 +248,25 @@ input[type=checkbox]{
   
 
   #google_translate_element img{
-    width:30px;
-    height: 10px;
+    width:40px;
+    height: 20px;
     
   }
+
+  .goog-te-gadget {
+    font-family: arial;
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+    margin: 15px;
+}
+
+.goog-te-gadget {
+  font-family: arial;
+  font-size: 18px;
+  color: #666;
+  white-space: nowrap;
+}
 
   .flip-card {
     background-color: transparent;
@@ -481,7 +496,6 @@ input[type=checkbox]{
   opacity: 1;
 }
 
-
 @media screen and (prefers-reduced-motion: reduce){
   #recording{
   animation: none;
@@ -521,11 +535,6 @@ input[type=checkbox]{
 		transition:none;
 	}
 }
-
-
-
-
-
 
 
 #timer{
