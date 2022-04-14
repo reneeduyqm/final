@@ -79,7 +79,7 @@ p{
 
 img{
   height: 300px;
-  width: 310px;
+  width: 300px;
   z-index: 1;
 
   
@@ -361,8 +361,11 @@ input[type=checkbox]{
 
     display:flex;
     width: 100%;
-    line-height: 75px;
+    line-height: 70px;
     font-size: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
   }
 
   
@@ -410,67 +413,6 @@ input[type=checkbox]{
   animation-play-state: paused;
 }
 
-@media screen and (prefers-reduced-motion: reduce){
-  #recording{
-  animation: none;
-  }
-  #recording{
-    animation: reduce;
-  }
-  .bio img {
-    animation: none;
-  }
-  .bio img{
-    animation: reduce;
-  }
-  a.skip {
-    -webkit-transition: initial;
-    transition: initial;
-  }
-  #hobby img:hover {
-    transform: none;
-  }
-  .bio{
-    background-attachment: scroll;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-  
-  .flip-card-back {
-    transform: none;
-  }
-}
-
-
-
-#hobby{
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 20px;
-  column-gap: 20px;
-  justify-items: center;
-  width: auto;
-  margin: 45px;
-
-} 
-
-#hobby img {
-  border: 2px solid #3d81e1;
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  opacity: 0.5;
-}
-
-#hobby img:hover {
-  transform: scale(1.10);
-  border: none;
-  opacity: 1;
-}
-
-
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -514,6 +456,78 @@ input[type=checkbox]{
   transform: rotateY(180deg);
 }
 
+#hobby{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-items: center;
+  width: auto;
+  margin: 45px;
+
+} 
+
+#hobby img {
+  border: 2px solid #3d81e1;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  opacity: 0.5;
+}
+
+#hobby img:hover {
+  transform: scale(1.10);
+  border: none;
+  opacity: 1;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  #recording{
+  animation: none;
+  }
+  #recording{
+    animation: reduce;
+  }
+  .bio img {
+    animation: none;
+  }
+  .bio img{
+    animation: reduce;
+  }
+  a.skip {
+    -webkit-transition: initial;
+    transition: initial;
+  }
+  #hobby img:hover {
+    transform: none;
+  }
+  .bio{
+    background-attachment: scroll;
+  }
+
+  .flip-card:hover .flip-card-inner {
+		transform: none;
+	}
+	
+	.flip-card:focus .flip-card-inner{
+		transform: none;
+	}
+	.flip-card-back { 
+		transform: none;
+	}
+
+	.flip-card-inner{
+		transition:none;
+	}
+}
+
+
+
+
+
+
+
 #timer{
   width:10%;
   margin: 0px;
@@ -539,7 +553,6 @@ input[type=checkbox]{
  #photos{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-evenly;
 
 
@@ -588,14 +601,20 @@ input[type=checkbox]{
 }
 
 @media screen and (min-width: 1000px){
+
   #photos{
     display: flex;
     flex-direction: column;
+    width:90%;
     height: 1200px;
-  
+    padding: 20px;
   
   }
-    
+
+  .flip-card{
+      margin: 10px;
+  }
+ 
   
     #hobby{
       display: grid;
