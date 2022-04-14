@@ -111,7 +111,6 @@ nav li{
 
 a:link {
   text-decoration: none;
-  font-size: 18px;
 }
 
 a:hover{
@@ -150,8 +149,8 @@ footer{
     text-align: center;
   }
 
-.button {
-    background-color: #6abf6e;
+  .button {
+    background-color: #679269;
     display: inline-block;
     border: none;
     color: #ffffff;
