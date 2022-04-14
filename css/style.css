@@ -114,7 +114,6 @@ a:link {
 }
 
 a:hover{
-    /* make the background color of your link black and the text white when you hover over it */
     color: #416a03;
 }
 
@@ -350,7 +349,6 @@ input[type=checkbox]{
     }
   
     textarea{
-      width:100%;
       height: 25vh;
     }
    
@@ -362,13 +360,9 @@ input[type=checkbox]{
 #photos{
 
     display:flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     line-height: 75px;
     font-size: 30px;
-    flex-wrap: wrap;
-
   }
 
   
@@ -427,11 +421,25 @@ input[type=checkbox]{
     animation: none;
   }
   .bio img{
-        animation: reduce;
+    animation: reduce;
   }
   a.skip {
     -webkit-transition: initial;
     transition: initial;
+  }
+  #hobby img:hover {
+    transform: none;
+  }
+  .bio{
+    background-attachment: scroll;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  
+  .flip-card-back {
+    transform: none;
   }
 }
 
@@ -439,11 +447,10 @@ input[type=checkbox]{
 
 #hobby{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   row-gap: 20px;
   column-gap: 20px;
   justify-items: center;
-
   width: auto;
   margin: 45px;
 
@@ -517,13 +524,7 @@ input[type=checkbox]{
 
 @media only screen and (min-width: 800px) {
   form{
-    width: 60%;
-    margin: 0 auto;
     margin-bottom: 30px;
-  }
-
-  input{
-    width:100%;
   }
 
   textarea{
@@ -533,12 +534,10 @@ input[type=checkbox]{
  
  div + label{
     line-height: 6vh;
-    vertical-align:top;
  }
 
  #photos{
   display: flex;
-  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -591,10 +590,8 @@ input[type=checkbox]{
 @media screen and (min-width: 1000px){
   #photos{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    height: 1200px;
   
   
   }
@@ -602,11 +599,8 @@ input[type=checkbox]{
   
     #hobby{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       row-gap: 10px;
-      column-gap: 10px;
-      justify-items: center;
-      margin: 45px;
     
     } 
 
